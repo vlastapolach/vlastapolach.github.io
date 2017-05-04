@@ -15,7 +15,7 @@ p.small {
 }
 
 .hodiny {
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .codecademy {
@@ -93,7 +93,7 @@ header .container {
 }
 
 .jumbotron {
-  background: url("https://vlastapolach.github.io/portfolio/img/expecto.jpg") no-repeat fixed 0px 100%;
+  background: url("http://vlastapolach.cz/img/expecto.jpg") no-repeat fixed 0px 100%;
   background-size: cover;
   background-position: top center;
 }

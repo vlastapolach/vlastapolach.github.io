@@ -93,9 +93,17 @@ header .container {
 }
 
 .jumbotron {
-  background: url("http://vlastapolach.cz/img/expecto.jpg") no-repeat fixed 0px 100%;
-  background-size: cover;
-  background-position: top center;
+    background: url("http://vlastapolach.cz/img/expecto.jpg") no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: auto;
+    width:100%;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    background-attachment: fixed;
+  }
 }
 
 header img {
@@ -108,6 +116,7 @@ header .intro-text .name {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
+  padding-top:50px;
 }
 header .intro-text .skills {
   font-size: 1.75rem;
@@ -116,8 +125,8 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
-    padding-bottom: 170px;
+    padding-top: 120px;
+    padding-bottom: 200px;
   }
   header .intro-text .name {
     font-size: 4.75em;

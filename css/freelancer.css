@@ -10,10 +10,15 @@ body {
 p {
   font-size: 20px;
 }
+li {
+  font-size: 18px;
+}
 p.small {
   font-size: 16px;
 }
-
+.space {
+  margin-top: 30px;
+}
 .hodiny {
   font-size: 16px;
 }
@@ -23,7 +28,11 @@ p.small {
   height: 28px;
   margin-top: -6px;
 }
-
+.codecamp {
+  width: 180px;
+  height: auto;
+  margin-top: -4px;
+}
 .contactik {
     font-size: 12px;
 }

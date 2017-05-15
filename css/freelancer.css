@@ -25,7 +25,14 @@ p.small {
 .hodiny {
   font-size: 16px;
 }
-
+.owl {
+  padding-top: 40px;
+}
+.btn-owl {
+  margin-top: 30px;
+  margin-bottom: 30px; 
+  font-size: 20px;
+}
 .codecademy {
   width: 180px;
   height: 28px;

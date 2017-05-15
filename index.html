@@ -229,11 +229,6 @@
                       <li>Object Oriented Programming <span class="label label-warning">Probíhá</span></li>
                     </ul>
                 </div>
-                <!--div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#contact" class="btn btn-lg btn-outline">
-                        Pošli mi sovu
-                    </a>
-                </div-->
             </div>
         </div>
     </section>
@@ -247,12 +242,48 @@
 
                 </div>
             </div>
-            <div class="row">
+            <!--div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
                     <p><a href="mailto:&#118;&#108;&#97;&#115;&#116;&#97;&#64;&#118;&#108;&#97;&#115;&#116;&#97;&#112;&#111;&#108;&#97;&#99;&#104;&#46;&#99;&#122;">vlasta@vlastapolach.cz</a></p>
                 </div>
                 <div class="col-lg-4">
                   <p>Meet me on <a href="https://github.com/vlastapolach" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></p>
+                </div>
+            </div-->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" novalidate action="https://formspree.io/vlasta@vlastapolach.cz" method="POST">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="What's your name?">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" placeholder="E-mail" id="email" name="_replyto" required data-validation-required-message="Where can I send you a reply?">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="message">Message</label>
+                                <textarea rows="5" name="message" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Don't let the owl fly empty."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12" style="text-align: center;">
+                                <button type="submit" value="Send" class="btn btn-success btn-lg">SEND THE OWL</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             </div>
@@ -557,7 +588,7 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!--script src="js/contact_me.js"></script-->
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>

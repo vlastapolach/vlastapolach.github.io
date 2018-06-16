@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heureka.cz URL Parser</title>
+  <meta name="description" content="Automate the tasks you don't have to do">
+  <meta name="author" content="vlastapolach.cz">
+  <link rel="shortcut icon" type="image/x-icon" href="http://vlastapolach.cz/img/favicon.ico">
+
+  <!-- Bootstrap Core CSS + FontAwesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        Heureka.cz URL Parser
+      </div>
+    </div>
+  </nav>
+
+  <section id="content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h1>1) When do you want to use this?</h1>
+          <p>
+            For marketing/sales activities you can download a list of Czech e-shops from one of the Czech biggest catalog <a href="https://obchody.heureka.cz/" target="_blank">heureka.cz</a>. E-shops are divided into different categories and from each category, there are shown max. 300 e-shops (so you need to go deeper to inner categories to get more results).
+          </p>
+          <h1>2) Download Chrome Plugin</h1>
+          <p>
+            For security reasons, you can't browse other URLs source code (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">Access-Control-Allow-Origin</a>). You have to use <a href="https://www.google.com/chrome/"
+              target="_blank">Google Chrome</a> and download and <strong>enable</strong> this plugin: <strong><a href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi" target="_blank">Allow-Control-Allow-Origin: *</a></strong>. Before <strong>new run</strong>, it is recommended to <strong>Deactivate</strong> and then <strong>Activate</strong> the A-C-A-O* plugin and refresh the page.
+          </p>
+          <h1>3) Paste the URL of category</h1>
+        </div>
+        <div class="col-md-12">
+          <p>Insert only part with category name (without beginning and end slashes) - <span class="blue">Blue</span> example <code>https://obchody.heureka.cz/<span class="blue">auto-moto</span>/</code></p>
+          <p class="small">If empty, Parser will search on main page  <code><a href="https://obchody.heureka.cz/" target="_blank">https://obchody.heureka.cz/</a></code></p>
+          <strong>Category name/URL:</strong></br>
+          <form class="form-inline">
+            <div class="form-group">
+              <span class="inline">https://obchody.heureka.cz/</span><input type="text" class="form-control form-inline" id="oldUrl" placeholder="auto-moto" value="auto-moto"><span class="inline">/</span>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-12">
+          <h1>4) Click Proceed</h1>
+          <form class="form-inline">
+            <button type="submit" class="btn btn-lg btn-primary" id="proceed">Proceed</button>
+          </form>
+          <div class="form-group">
+            <label for="comment" class="logRes">Console log:</label>
+            <textarea class="form-control" rows="4" id="logRes"></textarea>
+          </div>
+          <!--div id="logRes">Console log:<br/></div-->
+          <h1>5) Download CSV</h1>
+          <p>Based on the number of URLs and connection speed, searching might take a while. The Download button will become active after the searching is done.</p>
+          <div class="download-button">
+            <a onclick='downloadCSV();' class="btn btn-lg btn-danger disabled" id="download">Download CSV</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-right">
+      <a href="http://vlastapolach.cz" target="_blank">vlastapolach.cz</a>
+    </div>
+  </footer>
+
+  <!-- JS + jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="js/func.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🐒 Source Code Crawler</title>
+  <meta name="description" content="Automate the tasks you don't have to do">
+  <meta name="author" content="vlastapolach.cz">
+  <link rel="shortcut icon" type="image/x-icon" href="http://vlastapolach.cz/img/favicon.ico">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+
+  <!-- Bootstrap Core CSS + FontAwesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        🐒 Source Code Crawler
+      </div>
+    </div>
+  </nav>
+
+  <section id="content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h1>1) When do you want to use this?</h1>
+          <p>
+            For marketing/sales activities you can search through the list of URLs to check for a piece of code to filter URLs which are using Wordpress, Joomla or any other piece of SW.
+          </p>
+          <h1>2) Download Chrome Plugin</h1>
+          <p>
+            For security reasons, you can't browse other URLs source code (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">🔗 Access-Control-Allow-Origin</a>). You have to use <a href="https://www.google.com/chrome/"
+              target="_blank">🔗 Google Chrome</a> and download and <strong>enable</strong> this plugin: <strong><a href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi" target="_blank">🔗 Allow-Control-Allow-Origin: *</a></strong>. Before <strong>new run</strong>, it is recommended to <strong>Deactivate</strong> and then <strong>Activate</strong> the A-C-A-O* plugin and refresh the page.
+          </p>
+          <h1>3) Paste the search phrase</h1>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="comment">Search phrase:</label>
+            <input type="text" class="form-control" id="oldUrl" placeholder="wp-includes" value="wp-includes"></textarea>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h1>4) Paste the list of URLs</h1>
+          <p>One URL per line, in the format:<br/>
+            <code>https://wordpress.org/</code><br/>
+            <code>http://supermaminka.cz/</code><br/>
+            <code>http://www.vlastapolach.cz/</code><br/>
+            Each URL on a single line, no spaces, no commas, full URL (including <code>http://</code>)
+          </p>
+          <div class="form-group">
+            <label for="comment">List of URLs:</label>
+            <textarea class="form-control" rows="16" id="newUrl" placeholder="https://wordpress.org/"></textarea>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h1>5) Click Proceed</h1>
+          <form class="form-inline">
+            <button type="submit" class="btn btn-lg btn-danger disabled" id="proceed">Proceed</button>
+          </form>
+          <div class="form-group">
+            <label for="comment" class="logRes">Console log:</label>
+            <textarea class="form-control" rows="4" id="logRes"></textarea>
+          </div>
+          <h1>6) Download CSV</h1>
+          <p>Based on the number of URLs and connection speed, searching might take a while. The Download button will become active after the searching is done.</p>
+          <div class="download-button">
+            <a href='#' onclick='downloadCSV({ filename: "crawler-export.csv" });' class="btn btn-lg btn-danger disabled" id="download">Download CSV</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-right">
+      <a href="http://vlastapolach.cz" target="_blank">&copy; <span class="foot-link"></span> vlastapolach.cz</a>
+    </div>
+  </footer>
+
+  <!-- JS + jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="js/func.js"></script>
+</body>
+
+</html>

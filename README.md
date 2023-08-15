@@ -1,5 +1,1 @@
-# portfolio
--- Vlasta Polach --
-http://vlastapolach.github.io
-
-Freelance web developer
+nothing to see here
